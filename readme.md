@@ -1,8 +1,8 @@
-# C Library
+# Troglo Data Structures
 
 ### status
 
-[![Linux Users](https://github.com/troglodyte-coder/meson_library_c/actions/workflows/ci_runner_linux.yml/badge.svg)](https://github.com/troglodyte-coder/meson_library_c/actions/workflows/ci_runner_linux.yml) [![MacOSX Users](https://github.com/troglodyte-coder/meson_library_c/actions/workflows/ci_runner_macosx.yml/badge.svg)](https://github.com/troglodyte-coder/meson_library_c/actions/workflows/ci_runner_macosx.yml) [![Windows Users](https://github.com/troglodyte-coder/meson_library_c/actions/workflows/ci_runner_windows.yml/badge.svg)](https://github.com/troglodyte-coder/meson_library_c/actions/workflows/ci_runner_windows.yml)
+[![Linux Users](https://github.com/troglodyte-stdlib/troglo-structures-c/actions/workflows/ci_runner_linux.yml/badge.svg)](https://github.com/troglodyte-stdlib/troglo-structures-c/actions/workflows/ci_runner_linux.yml) [![MacOSX Users](https://github.com/troglodyte-stdlib/troglo-structures-c/actions/workflows/ci_runner_macosx.yml/badge.svg)](https://github.com/troglodyte-stdlib/troglo-structures-c/actions/workflows/ci_runner_macosx.yml) [![Windows Users](https://github.com/troglodyte-stdlib/troglo-structures-c/actions/workflows/ci_runner_windows.yml/badge.svg)](https://github.com/troglodyte-stdlib/troglo-structures-c/actions/workflows/ci_runner_windows.yml)
 
 ## overview
 
@@ -13,6 +13,11 @@ Please add relevant information about your package.
 ## tooling
 
 * * *
+
+A data structure is a specialized format for organizing, processing, retrieving
+and storing data. There are several basic and advanced types of data structures,
+all designed to arrange data to suit a specific purpose. Data structures make it
+easy for users to access and work with the data they need in appropriate ways.
 
 The targeted audience we are building for is *Windows 10*, *MacOSX*, *ChromeOS*
 and *Linux* users. This project uses [Meson](https://mesonbuild.com/) `0.63.0`
@@ -30,18 +35,18 @@ in your subprojects directory and include the dependency in your project.
 ```console
 [wrap-git]
 directory = troglo-construct
-url = https://github.com/troglodyte-stdlib/troglo-name-c.git
+url = https://github.com/troglodyte-stdlib/troglo-structures-c.git
 revision = main
 
 [provide]
-meson_library_c = trog_dep
+troglo-structures-c = trog_structures_dep
 ```
 
 
 The next step should be to add the package to your Meson project:
 
 ```meson
-trog_dep = dependency('troglo-construct')
+trog_dep = dependency('troglo-structures-c')
 
 executable('prog', 'main.c',
     dependencies : [trog_dep])
@@ -67,7 +72,7 @@ more please view the API documentation thanks.
 // gmail: <michaelbrockus@gmail.com>
 //
 #include <stdio.h>
-#include <troglodyte/package.h>
+#include <troglodyte/structs/package.h>
 
 
 //
