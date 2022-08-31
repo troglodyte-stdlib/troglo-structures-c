@@ -1,4 +1,4 @@
-project('Troglo Library', 'c',
+project('Troglo Data Structures', 'c',
     license: 'apache-2.0',
     version: '0.1.0',
     meson_version: '>=0.63.0',
